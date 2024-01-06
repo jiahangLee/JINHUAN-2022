@@ -40,3 +40,7 @@ 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
 
 
 我能上单打诺克蛮王，中单打亚索劫，剑圣打野
+
+
+git diff    工作区->暂存区
+git diff --cached     暂存区->分支
