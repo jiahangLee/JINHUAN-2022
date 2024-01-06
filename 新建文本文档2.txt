@@ -1,0 +1,13 @@
+java . lang . StringBuffer tStrSql = new java . lang . StringBuffer ( ) ; 
+tStrSql . append ( "select FPSERSONID  from T_WFR_PERSONROLE where FROLEID =( " ) ; 
+tStrSql . append ( " select fid from T_WFR_WFROLE where FROLENAME_L2 ='工程管理中心副总经理') and forgid=(select FADMINORGUNITID  from T_MM_Project where FPROJECTASSISTID ='" + xmid + "' ) " ) ; 
+com . kingdee . jdbc . rowset . IRowSet rs = com . kingdee . eas . util . app . DbUtil . executeQuery ( __bosContext , tStrSql . toString ( ) ) ; 
+while ( rs . next ( ) ) { xmfzrid = rs . getString ( "FPSERSONID" ) . toString ( ) ; } 
+
+
+
+java . lang . StringBuffer tStrSql = new java . lang . StringBuffer ( ) ; 
+tStrSql . append ( "select FPSERSONID  from T_WFR_PERSONROLE where FROLEID =( " ) ; 
+tStrSql . append ( " select fid from T_WFR_WFROLE where FROLENAME_L2 ='工程管理中心副总经理') and forgid=(select FADMINORGUNITID  from T_MM_Project where FPROJECTASSISTID ='" + xmid + "' ) " ) ; 
+com . kingdee . jdbc . rowset . IRowSet rs = com . kingdee . eas . util . app . DbUtil . executeQuery ( __bosContext , tStrSql . toString ( ) ) ; 
+while ( rs . next ( ) ) { xmfzrid = rs . getString ( "FPSERSONID" ) . toString ( ) ; } 
